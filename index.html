@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IoT Industrial</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <!-- Custom Styles theme -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Connection panel -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <span id="connectionStatus">Connection - Disconnected.</span>
+          </div>
+          <div class="panel-body" id="serverCollapse">
+            <div class="col-lg-1">
+              <div class="col-lg-1">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td><label for="boton_bool" class="label-toggle" >boton_bool</label></td>
+                      <td>
+                        <label class="switch">
+                          <input type="checkbox" id ="boton_bool" disabled>
+                          <span class="slider round"></span>
+                        </label>
+                    </td>
+                    </tr>
+                    
+                    <tr>
+                      <td><label for="valor_analog">valor_analog</label></td>
+                      <td><label id="valor_analog"></label></td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+                <div class="form-group">
+                  <label for="publishButton"></label>
+                  <button id="publishButton" type="button" class="btn btn-default" onclick="publish('boton_bool',0, '1', false);" disabled>Publicar 1 en boton_bool</button>
+                </div>              
+
+                <div class="form-group">
+                  <label for="publishButton2"></label>
+                  <button id="publishButton2" type="button" class="btn btn-default" onclick="publish('boton_bool',0, '0', false);" disabled>Publicar 0 en boton_bool</button>
+                </div>                 
+
+                <div class="form-group">
+                  <input type="text" id="analog_value" value="654">
+                </div>
+
+                <div class="form-group">
+                  <label for="publishButton3"></label>
+                  <button id="publishButton3" type="button" class="btn btn-default" onclick="publish('valor_analog',0, document.getElementById('analog_value').value, false);" >Publicar Analogico</button>
+                </div>
+                
+                <div class="form-group">
+                  <label for="clientConnectButton"></label>
+                  <a id="clientConnectButton" class="btn btn-default" onclick="connectionToggle();">Connect</a>
+                  </div>
+
+
+            </div>
+          </div>
+        </div>
+  <!-- End of Connection panel -->
+
+  </div>
+
+  <!-- Source Paho MQTT Client-->
+  <script src="paho-mqtt.js"></script>
+  <!--<script src="../src/paho-mqtt.js"></script>-->
+
+  <!-- Utility AJavascript -->
+  <script src="utility.js"></script>
+
+  <!-- Javascript used for Bootstrap Theme -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+
+</html>

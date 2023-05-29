@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/user.js"></script>    
+    <title>User Form</title>
+</head>
+
+<body onload="readAllUsers()">
+    Nombre: <input id = "nombre" type="text" placeholder="name"><br>
+    Marca: <input id = "marca" type="text" placeholder="marca"><br>
+    Precio: <input id = "precio" type="text" placeholder="precio"><br>
+    Material: <input id = "material" type="text" placeholder="material"><br>
+
+    <button type="button" onclick="createUser();">Guardar</button>
+    
+    <table id="table-user" border="1">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Precio</th>
+                <th>Material</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+
+    </table>
+</body>
+</html>
