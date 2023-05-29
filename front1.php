@@ -22,7 +22,7 @@
     </style>
 </head>
 <body>
-    <h2>Clocks Management</h2>
+    <h2>RELOJES</h2>
     <?php
     $nombreErr = $marcaErr = $precioErr = $materialErr = '';
     $nombre = $marca = $precio = $material = '';
@@ -66,17 +66,17 @@
     }
     ?>
     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <label for="nombre">Name:</label>
+        <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre" value="<?php echo htmlspecialchars($nombre); ?>" required>
         <span class="error">
             <?php echo $nombreErr; ?>
         </span>
-        <label for="marca">Brand:</label>
+        <label for="marca">Marca:</label>
         <input type="text" name="marca" id="marca" value="<?php echo htmlspecialchars($marca); ?>" required>
         <span class="error">
             <?php echo $marcaErr; ?>
         </span>
-        <label for="precio">Price:</label>
+        <label for="precio">Precio:</label>
         <input type="number" name="precio" id="precio" value="<?php echo htmlspecialchars($precio); ?>" required>
         <span class="error">
             <?php echo $precioErr; ?>
@@ -86,7 +86,7 @@
         <span class="error">
             <?php echo $materialErr; ?>
         </span>
-        <button type="submit">Add Clock</button>
+        <button type="submit">Guardar</button>
     </form>
     <table>
         <tr>

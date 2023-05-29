@@ -25,7 +25,7 @@ function llenarTabla(data)
     for(let i=0;i<data.length;i++){
         document.querySelector('#table-user tbody').innerHTML += 
         `<tr>
-            <td>${data[i].user_id}</td>
+            <td>${data[i].relojes_id}</td>
             <td>${data[i].user_name}</td>
             <td>${data[i].user_last_name}</td>
             <td>${data[i].user_email}</td>

@@ -6,7 +6,7 @@ def on_message(mosq, obj, msg):
 
 mqttc = mqtt.Client()
 mqttc.on_message = on_message
-mqttc.connect("localhost", 1883, 60)
+mqttc.connect("152.67.54.115", 1883, 60)
 mqttc.subscribe("#", 0)
 
 mqttc.loop_forever()
